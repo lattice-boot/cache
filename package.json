@@ -1,0 +1,56 @@
+{
+  "name": "@lattice/cache",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "lattice",
+    "backend",
+    "web",
+    "restful",
+    "rest",
+    "framework",
+    "api",
+    "app"
+  ],
+  "repository": "lattice-boot/cache",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist",
+    "test": "jest",
+    "test:cov": "jest --coverage --coverageReporters text-summary"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.7",
+    "jest": "^24.7.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "tscpaths": "0.0.7",
+    "typescript": "^3.4.5",
+    "@lattice/core": "0.0.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@cache/(.*)": "<rootDir>/src/$1"
+    }
+  },
+  "peerDependencies": {
+    "@lattice/core": "^0.0.2"
+  },
+  "author": "noir-lattice",
+  "license": "MIT"
+}
